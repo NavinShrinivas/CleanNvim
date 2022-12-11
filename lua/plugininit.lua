@@ -19,3 +19,6 @@ require("pluginsetup/lsp")
 -- completion framework
 require("pluginsetup/cmp")
 
+-- Other simple setups : 
+require("nvim-autopairs").setup {}
+require('nvim-autopairs').enable()

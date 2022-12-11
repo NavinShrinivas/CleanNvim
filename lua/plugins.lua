@@ -34,16 +34,16 @@ return require('packer').startup(function(use)
    }
 
    -- Generic utils
-   use 'windwp/nvim-autopairs'
-   use 'tpope/vim-surround'
+   use 'windwp/nvim-autopairs' -- Done, only calling setup function on require
+   use 'tpope/vim-surround' -- Done, no setup
    use {
-      'numToStr/Comment.nvim',
+      'numToStr/Comment.nvim', -- Done, only binds
       config = function()
          require('Comment').setup()
       end
    }
    use {
-      "startup-nvim/startup.nvim",
+      "startup-nvim/startup.nvim", -- Done, check line below, calls function taht returns a config json
       require("startup").setup(require("pluginsetup/startup"))
    }
    if install_plugins then
