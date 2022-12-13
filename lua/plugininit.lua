@@ -22,6 +22,8 @@ require("pluginsetup/cmp")
 -- telescope setup, only for fzf keybinds cus ugh muscle memory
 require("pluginsetup/telescope")
 
+-- telescope setup, only for fzf keybinds cus ugh muscle memory
+require("pluginsetup/treesitter")
 
 -- Other simple setups, without seperate file:
 require("nvim-autopairs").setup {}

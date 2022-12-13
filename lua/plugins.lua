@@ -7,7 +7,7 @@ return require('packer').startup(function(use)
    use 'nvim-lualine/lualine.nvim' -- Statusline, done
    use {
       'nvim-treesitter/nvim-treesitter',
-      run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
+      run = ':TSUpdate',
    }
 
    -- LSP stuff
