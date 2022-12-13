@@ -1,7 +1,7 @@
--- web-dev-icons : 
+-- web-dev-icons :
 require("pluginsetup/devicons")
 
--- lualine : 
+-- lualine :
 require("pluginsetup/lualine")
 
 -- neotree
@@ -19,6 +19,8 @@ require("pluginsetup/lsp")
 -- completion framework
 require("pluginsetup/cmp")
 
--- Other simple setups : 
+-- Other simple setups :
 require("nvim-autopairs").setup {}
 require('nvim-autopairs').enable()
+-- require'navigator'.setup()
+require('cmp_nvim_lsp').setup()

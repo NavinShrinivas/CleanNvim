@@ -1,7 +1,8 @@
 return require('packer').startup(function(use)
    use 'wbthomason/packer.nvim'
-   -- Apperance : 
+   -- Apperance :
    use 'kyazdani42/nvim-web-devicons' -- File icons, done
+   use 'onsails/lspkind.nvim'
    use 'nvim-lualine/lualine.nvim' -- Statusline, done
    use {
       'nvim-treesitter/nvim-treesitter',
@@ -11,27 +12,29 @@ return require('packer').startup(function(use)
    -- LSP stuff
    use 'neovim/nvim-lspconfig'
    use { "williamboman/mason.nvim" }
-   use {'williamboman/mason-lspconfig.nvim'}
-   use 'hrsh7th/cmp-nvim-lsp'
+   use { 'williamboman/mason-lspconfig.nvim' }
+   use 'hrsh7th/cmp-nvim-lsp' --done
    use 'hrsh7th/cmp-buffer'
    use 'hrsh7th/cmp-path'
    use 'hrsh7th/cmp-cmdline'
    use 'hrsh7th/nvim-cmp'
    use { "L3MON4D3/LuaSnip" }
+   use { "jose-elias-alvarez/null-ls.nvim" }
 
    -- UI utils
-   use {'romgrk/barbar.nvim', wants = 'nvim-web-devicons'} -- Done
+   use { 'romgrk/barbar.nvim', wants = 'nvim-web-devicons' } -- Done
    use "rebelot/kanagawa.nvim" -- No setup, usage in theme.lua
    use "nvim-lua/plenary.nvim" -- done
    use('mrjones2014/smart-splits.nvim') -- done, only mappings
    use 'nvim-telescope/telescope.nvim' -- done, only mappings
-   use{
+   use {
       "nvim-neo-tree/neo-tree.nvim", -- done
       branch = "v2.x",
-      requires = { 
+      requires = {
          "MunifTanjim/nui.nvim",
       }
    }
+   use { "nvim-lua/popup.nvim" }
 
    -- Generic utils
    use 'windwp/nvim-autopairs' -- Done, only calling setup function on require
