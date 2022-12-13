@@ -1,8 +1,3 @@
-require('lualine').setup {
-  -- options = { theme  = "ayu-mirage"  },
-  -- lualine loads the use colorcheme theme by default
-}
-
 require('kanagawa').setup({
     undercurl = true,           -- enable undercurls
     commentStyle = { italic = true },

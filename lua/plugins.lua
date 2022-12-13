@@ -2,6 +2,7 @@ return require('packer').startup(function(use)
    use 'wbthomason/packer.nvim'
    -- Apperance :
    use 'kyazdani42/nvim-web-devicons' -- File icons, done
+   use 'ryanoasis/vim-devicons'
    use 'onsails/lspkind.nvim'
    use 'nvim-lualine/lualine.nvim' -- Statusline, done
    use {
@@ -10,7 +11,6 @@ return require('packer').startup(function(use)
    }
 
    -- LSP stuff
-   use 'neovim/nvim-lspconfig'
    use { "williamboman/mason.nvim" }
    use { 'williamboman/mason-lspconfig.nvim' }
    use 'hrsh7th/cmp-nvim-lsp' --done
@@ -20,6 +20,8 @@ return require('packer').startup(function(use)
    use 'hrsh7th/nvim-cmp'
    use { "L3MON4D3/LuaSnip" }
    use { "jose-elias-alvarez/null-ls.nvim" }
+   use 'neovim/nvim-lspconfig' -- Configurations for Nvim LSP
+   use { "ray-x/lsp_signature.nvim" } --Done
 
    -- UI utils
    use { 'romgrk/barbar.nvim', wants = 'nvim-web-devicons' } -- Done
@@ -34,7 +36,14 @@ return require('packer').startup(function(use)
          "MunifTanjim/nui.nvim",
       }
    }
-   use { "nvim-lua/popup.nvim" }
+   -- Using fzf as lsp wrappers only, Below all are just UI for lsp stuff
+   use "junegunn/fzf"
+   use 'gfanto/fzf-lsp.nvim'
+   use {
+      'kosayoda/nvim-lightbulb',
+      requires = 'antoinemadec/FixCursorHold.nvim',
+   }
+   use 'j-hui/fidget.nvim'
 
    -- Generic utils
    use 'windwp/nvim-autopairs' -- Done, only calling setup function on require

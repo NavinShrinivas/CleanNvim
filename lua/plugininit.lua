@@ -19,8 +19,13 @@ require("pluginsetup/lsp")
 -- completion framework
 require("pluginsetup/cmp")
 
--- Other simple setups :
+-- telescope setup, only for fzf keybinds cus ugh muscle memory
+require("pluginsetup/telescope")
+
+
+-- Other simple setups, without seperate file:
 require("nvim-autopairs").setup {}
 require('nvim-autopairs').enable()
--- require'navigator'.setup()
 require('cmp_nvim_lsp').setup()
+require('nvim-lightbulb').setup({autocmd = {enabled = true}})
+require"fidget".setup{}

@@ -21,7 +21,8 @@ vim.opt.shiftwidth = 3
 vim.opt.softtabstop = 3
 vim.opt.expandtab = true
 vim.g.mapleader = " "
-vim.opt.clipboard = "unnamedplus" 
+vim.opt.clipboard = "unnamedplus"
+vim.cmd("set encoding=UTF-8")
 
 -- Installing and loading plugins :
 require('plugins')

@@ -26,9 +26,10 @@ vim.keymap.set('n', "<leader>cc", "<cmd> lua require('Comment.api').toggle.linew
 vim.keymap.set('v', "<leader>cc", "<esc><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<cr>")
 
 -- LSP keybids :
-vim.keymap.set('n', "<leader>la", "<esc><cmd> lua vim.lsp.buf.code_action()<CR>")
-vim.keymap.set('n', "<leader>lr", "<esc><cmd> lua vim.lsp.buf.references()<CR> ")
-vim.keymap.set('n', "<leader>lf", "<esc><cmd> lua vim.lsp.buf.format()<CR> ")
-vim.keymap.set('n', "<leader>ld", "<esc><cmd> lua vim.lsp.buf.definition()<CR> ")
-vim.keymap.set('n', "<leader>ls", "<esc><cmd> lua vim.lsp.buf.signature_help()<CR> ")
+vim.keymap.set('n', "<leader>la", "<esc><cmd>:CodeActions<CR>")
+vim.keymap.set('n', "<leader>lr", "<esc><cmd>:References<CR>")
+vim.keymap.set('n', "<leader>lf", "<esc><cmd>lua vim.lsp.buf.format()<CR>")
+vim.keymap.set('n', "<leader>ld", "<esc><cmd>lua vim.lsp.buf.definition()<CR>")
+vim.keymap.set('n', "<leader>lD", "<esc><cmd>:Diagnostics<CR>")
+vim.keymap.set('n', "<leader>ls", "<esc><cmd>lua vim.lsp.buf.signature_help()<CR>")
 vim.keymap.set('n', "<leader>lh", "<esc><cmd> lua vim.lsp.buf.hover()<CR> ")
